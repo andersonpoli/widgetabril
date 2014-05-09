@@ -156,9 +156,6 @@ a{text-decoration: none;}
 #config ul li{
     display: inline-block;
     margin: 0 3px 10px 0;
-}
-#config ul li a{
-    display: block;
     padding: 5px;
     background: #d0d0d0;
     color: #3e3d3d;
@@ -167,12 +164,14 @@ a{text-decoration: none;}
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+    color: black;
+    cursor: pointer;
 }
-#config ul li a:hover{
+#config ul li:hover{
     color: white;
     background: #db2027;
 }
-#config ul li a.ativo{
+#config ul li.ativo{
     padding-right:25px;
     color: white;
     background: #db2027 url(img/close.png) no-repeat right center;
