@@ -207,6 +207,60 @@
 	<div id="container">
 		<div id="top"></div>
 		<div id="materias" class="content">
+			<script id="search-results-template" type="text/mustache">
+				<li class="col-md-4 col-sm-6 col-xs-12 box-quero-levar {{#isGuia}}estabelecimento{{/isGuia}}{{#isBairro}}especial{{/isBairro}}{{#isTematica}}tematica{{/isTematica}} {{type_class}}">
+					{{#sub_category}}
+					<div class="chapeu">{{sub_category}}</div>
+					{{/sub_category}}
+					{{^sub_category}}
+					<div class="chapeu">{{category}}</div>
+					{{/sub_category}}
+					{{#isRatedVejasp}}
+					<div class="avaliado-vejasp">Avaliado por VEJASP</div>
+					{{/isRatedVejasp}}
+					{{#preview}}
+					<div class="imagem">
+						<div class="foto"><a href="[link]" title="{{nome}}" onclick="_gaq.push(['SITE._trackEvent','pagina-amigo-gringo','card-foto'])"><img src="{{preview}}" alt="{{nome}}"></a></div>
+					</div>
+					{{/preview}}
+					{{^preview}}
+					<div class="imagem"></div>
+					{{/preview}}
+					<div class="informacoes">
+						<a class="titulo" onclick="_gaq.push(['SITE._trackEvent','pagina-amigo-gringo','card-titulo'])" href="[link]">{{nome}}</a>
+						{{#isEstabelecimento}}
+						<span class="endereco">
+							{{address}} - {{#main_neighborhood}}{{main_neighborhood}}{{/main_neighborhood}} -
+							{{city}} {{#phone}}- Tel {{phone}} {{/phone}}
+							<p>
+								{{#geo_distance}}<strong class='distancia'>A {{geo_distance}} metros de você</strong>{{/geo_distance}}
+							</p>
+						</span>
+						{{/isEstabelecimento}}
+						{{^isEstabelecimento}}
+						<span class="endereco">{{description}}</span>
+						{{/isEstabelecimento}}
+						{{#showAvaliacao}}
+						{{#userRatingCss}}
+						<div class="avaliacao usuario">
+							<span class="icone-estrelaUsuario estrelas{{userRatingCss}}"></span>
+						</div>
+						<div class="num_avaliacoes">
+							{{#numero_avaliacoes}}
+							<a href="{{url}}#comment-section" onclick="_gaq.push(['SITE._trackEvent','pagina-amigo-gringo','card-avaliacao-usuario'])">
+								{{numero_avaliacoes}} avalições
+							</a>
+							{{/numero_avaliacoes}}
+						</div>
+						{{/userRatingCss}}
+						{{/showAvaliacao}}
+					</div>
+					<div class="queroLevar">
+						<input id="id-{{url}}" class="queroLevarCheck" value="{{url}}" type="checkbox">
+						<label for="id-{{url}}">Quero Levar</label>
+					</div>
+				</li>
+			</script>
 			<div id="bsc_lat">
 				<ul id="bsc_resultado" class="row"></ul>
 				<div id="bsc_paginador" class="paginacao"></div>
