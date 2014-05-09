@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Abril</title>
-<link rel="stylesheet" href="reset.css" media="all">
+	<link rel="stylesheet" href="reset.css" media="all">
 	<style>
 		#container{
 			width: 350px;
@@ -204,13 +204,13 @@
 
 </head>
 <body>
-	<div id="bsc_lat">
-		<ul id="bsc_resultado" class="row"></ul>
-		<div id="bsc_paginador" class="paginacao"></div>
-	</div>
 	<div id="container">
 		<div id="top"></div>
 		<div id="materias" class="content">
+			<div id="bsc_lat">
+				<ul id="bsc_resultado" class="row"></ul>
+				<div id="bsc_paginador" class="paginacao"></div>
+			</div>
 			<ul>
 				<li>
 					<a href="#" title="Title">
@@ -218,36 +218,6 @@
 						<div class="texto">
 							<span class="marca vejasp">VEJA São Paulo</span>
 							<span class="titulo">O que abre e o que fecha neste feriado</span>
-							<small>Publicado em 03/06/1985 as 6:00 PM</small>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#" title="Title">
-						<img src="temp/image2.png" alt="Guia do Estudante" />
-						<div class="texto">
-							<span class="marca guiadoestudante">Guia do Estudante</span>
-							<span class="titulo">MEC divulga o Guia do Participante com orientações para a redação do Enem 2013</span>
-							<small>Publicado em 03/06/1985 as 6:00 PM</small>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#" title="Title">
-						<img src="temp/image3.png" alt="Planeta Sustentável" />
-						<div class="texto">
-							<span class="marca planetasustentavel">Planeta Sustentável</span>
-							<span class="titulo">Os freakonomistas atacam outra vez</span>
-							<small>Publicado em 03/06/1985 as 6:00 PM</small>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#" title="Contigo">
-						<img src="temp/image4.png" alt="Alt" />
-						<div class="texto">
-							<span class="marca contigo">Contigo</span>
-							<span class="titulo">Guerra dos Sexos: Ronaldo beija outra menina na frente de Isadora</span>
 							<small>Publicado em 03/06/1985 as 6:00 PM</small>
 						</div>
 					</a>
@@ -279,20 +249,6 @@
 <script type="text/javascript" src="js/mustache.js"></script>
 <script type="text/javascript" src="js/busca.js"></script>
 <script type="text/javascript" src="js/search_result.js"></script>
+<script type="text/javascript" src="js/wid.js"></script>
 
-<script type="text/javascript">
-	$(document).ready(function() {
-		$(".config-button").click(function() {
-			$("#materias").slideToggle();
-			$("#config").slideToggle();
-		});
-		$(".close-config").click(function() {
-			$("#config").slideToggle();
-			$("#materias").slideToggle();
-		});
-		$("#config ul li a").click(function() {
-			$(this).toggleClass("ativo");
-		});
-	});
-</script>
 </html>
