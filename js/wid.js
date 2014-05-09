@@ -7,7 +7,7 @@
 			$("#config").slideToggle();
 			$("#materias").slideToggle();
 		});
-		$("#config ul li a").click(function() {
+		$("#config ul li").click(function() {
 			$(this).toggleClass("ativo");
 		});
 	});
