@@ -6,6 +6,20 @@ VEJASP.changeUrlFiltro = function(filtro) {
     window.location.hash = "#&category-meta_nav:" + filtro;
 }
 
+VEJASP.SaveFilters = function(filtro){
+  var filtros = [];
+  if(localStorage['filtros']){
+    filtros = localStorage['filtros'].split(',');
+  }
+
+  if (filtros.indexOf(filtro) === -1) {
+    filtros.push(filtro);
+  }else{
+    filtros.splice(filtros.indexOf(filtro));
+  }
+  localStorage['filtros'] = filtros;
+}
+
 VEJASP.filtroTipo = function(obj){
   $("ul.tipos li").removeClass('selecionado');
   //armazena em uma variável o valor do filtro por tipo
