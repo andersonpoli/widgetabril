@@ -27,7 +27,7 @@ VEJASP.BSC = {
   },
   BSCReady: function(marca){
     VEJASP.BSC.extendBSCCode();
-    BSC.servlet = "abrilbusca";
+    BSC.servlet = "vejasp";
 		BSC.context = 'https://www.iba.com.br/public/search/v2/';
     BSC.hits     = 11;
     BSC.ajaxMode = true;

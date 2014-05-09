@@ -50,7 +50,12 @@ blockquote, q {
     float: left;
     width: 100%;
     height: 50px;
-    background: #04643e url(img/logo.png) no-repeat center center;
+    background: #db2027;
+    font-family: "Ubuntu";
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
 }
 /* CONTENT *******************************************************************************/
 .content{
@@ -104,27 +109,9 @@ blockquote, q {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    margin: 0 0 5px 0;
 }
 #materias ul li a span.titulo{
     width: 100%;
-}
-
-#materias ul li a span.vejasp{
-    background: #db2027;
-    color: white;
-}
-#materias ul li a span.guiadoestudante{
-    background: #e5f1f1;
-    color: #4c4c4c;
-}   
-#materias ul li a span.contigo{
-    background: black;
-    color: white;
-}   
-#materias ul li a span.planetasustentavel{
-    background: #3c8154;
-    color: white;
 }
 #materias ul li a small{
     display: block;
@@ -193,7 +180,7 @@ blockquote, q {
     float: left;
     width: 100%;
     height: 50px;
-    background: #04643e;
+    background: #db2027;
 }
 #footer form{
     display: block;
