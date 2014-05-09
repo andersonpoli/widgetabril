@@ -25,6 +25,15 @@ VEJASP.BSC = {
   renderSearchEntry: function(_, resultObj) {
     return VEJASP.BSC.template('#search-results-template')(new Models.SearchResult(resultObj));
   },
+
+  AjustePaginacao: function(){
+    var paginacao = $('#bsc_paginador a');
+    $.each(paginacao, function(index, val) {
+      var hrefpag = $(this).attr('href').replace('http://', 'chrome-extension://');
+      $(this).attr('href', hrefpag);
+    });
+  },
+
   BSCReady: function(marca){
     VEJASP.BSC.extendBSCCode();
     BSC.servlet = "vejasp";
@@ -32,8 +41,9 @@ VEJASP.BSC = {
     BSC.hits     = 11;
     BSC.ajaxMode = true;
     BSC.didYouMeanAtivo = true;
-    BSC.search
+    BSC.tmpl.paginate.numberOfPages = 4;
   },
+  
  }
 
 
@@ -42,4 +52,7 @@ VEJASP.BSC = {
 
 BSC.ready(function(){
   VEJASP.BSC.BSCReady();
+  BSC.after(function(){
+    VEJASP.BSC.AjustePaginacao();
+  });
 });
