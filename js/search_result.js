@@ -87,7 +87,7 @@ Models.SearchResult = function(rawData) {
   this.user_rating       = parseInt(rawData['user_rating-meta'], 10) || 'none';
   this.userRatingCss     = this.user_rating || 'none';
   this.nome              = this.nome || this.post_title;
-  this.titulo            = this.title
+  this.titulo            = rawData['title'];
   this.showAvaliacao     = (this.isEstabelecimento || this.isAtracao);
   if (rawData['geo_distance']) {
     this.geo_distance    = Math.round(parseFloat(rawData['geo_distance'].split("E")[0]) * 1000);
