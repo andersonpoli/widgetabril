@@ -3,23 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Abril</title>
-	<link rel="stylesheet" href="reset.css" media="all">
-	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-		  	$(".config-button").click(function() {
-				$("#materias").slideToggle();
-				$("#config").slideToggle();
-			});
-			$(".close-config").click(function() {
-				$("#config").slideToggle();
-				$("#materias").slideToggle();
-			});
-			$("#config ul li a").click(function() {
-				$(this).toggleClass("ativo");
-			});
-		});
-	</script>
+<link rel="stylesheet" href="reset.css" media="all">
 	<style>
 		#container{
 			width: 350px;
@@ -220,6 +204,10 @@
 
 </head>
 <body>
+	<div id="bsc_lat">
+		<ul id="bsc_resultado" class="row"></ul>
+		<div id="bsc_paginador" class="paginacao"></div>
+	</div>
 	<div id="container">
 		<div id="top"></div>
 		<div id="materias" class="content">
@@ -276,12 +264,35 @@
 			</ul>
 		</div>
 		<div id="footer">
-			<form action="#" method="post">
-				<label><input type="text" name="busca" placeholder="Buscar em todas as matérias"></label>
+			<form action="#" method="get">
+				<label><input type="text" name="qu" placeholder="Buscar em todas as matérias"></label>
+				<input type="hidden" name="origembusca" value="bsc" />
 				<label><input type="submit"></label>
 			</form>
 			<div class="config-button"></div>
 		</div>
 	</div>
 </body>
+
+<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="libc/busca/js/v3/BSC.js"> </script> 
+<script type="text/javascript" src="js/mustache.js"></script>
+<script type="text/javascript" src="js/busca.js"></script>
+<script type="text/javascript" src="js/search_result.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".config-button").click(function() {
+			$("#materias").slideToggle();
+			$("#config").slideToggle();
+		});
+		$(".close-config").click(function() {
+			$("#config").slideToggle();
+			$("#materias").slideToggle();
+		});
+		$("#config ul li a").click(function() {
+			$(this).toggleClass("ativo");
+		});
+	});
+</script>
 </html>
