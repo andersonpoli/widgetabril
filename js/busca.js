@@ -29,16 +29,14 @@ VEJASP.BSC = {
     VEJASP.BSC.extendBSCCode();
     BSC.servlet = "vejasp";
 		BSC.context = 'https://www.iba.com.br/public/search/v2/';
-    BSC.hits     = 11;
+    BSC.hits     = 10;
     BSC.ajaxMode = true;
     BSC.didYouMeanAtivo = true;
     BSC.search
   },
  }
 
-
 //////////////////////////////// Ready ////////////////////////////////
-
 
 BSC.ready(function(){
   VEJASP.BSC.BSCReady();
