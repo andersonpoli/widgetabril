@@ -38,7 +38,7 @@ VEJASP.BSC = {
     VEJASP.BSC.extendBSCCode();
     BSC.servlet = "vejasp";
 		BSC.context = 'https://www.iba.com.br/public/search/v2/';
-    BSC.hits     = 11;
+    BSC.hits     = 10;
     BSC.ajaxMode = true;
     BSC.didYouMeanAtivo = true;
     BSC.tmpl.paginate.numberOfPages = 4;
@@ -46,9 +46,7 @@ VEJASP.BSC = {
   
  }
 
-
 //////////////////////////////// Ready ////////////////////////////////
-
 
 BSC.ready(function(){
   VEJASP.BSC.BSCReady();
