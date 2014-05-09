@@ -41,6 +41,7 @@ VEJASP.BSC = {
     BSC.hits     = 10;
     BSC.ajaxMode = true;
     BSC.didYouMeanAtivo = true;
+    BSC.tmpl.paginate.next = '';
     BSC.tmpl.paginate.numberOfPages = 4;
   },
   
