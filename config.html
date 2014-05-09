@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Abril</title>
+	<link rel="stylesheet" href="reset.css" media="all">
+
+	<style>
+		#container{
+			width: 350px;
+			float: left;
+			height: 600px;
+		}
+		/* TOP ***********************************************************************************/
+		#top{
+			float: left;
+			width: 100%;
+			height: 50px;
+			background: #04643e url(img/logo.png) no-repeat center center;
+		}
+		/* CONTENT *******************************************************************************/
+		#content{
+			float: left;
+			width: 100%;
+			max-height: 500px;
+			overflow: scroll;
+		}
+		#content ul {
+			display: block;
+			float: left;
+			width: 100%;
+			padding: 20px 0 0 0;
+		}
+		#content ul li{
+			display: block;
+			float: left;
+			width: 100%;
+			border-bottom: 1px solid #e3e3e3;
+			padding: 0 0 20px 0;
+			margin: 0 0 20px 0;
+		}
+		#content ul li a{
+			display: block;
+			float: left;
+			padding: 0 15px;
+			font:bold 14px  arial;
+			color: #777777;
+		}
+		#content ul li a img{
+			display: block;
+			float: left;
+			width: 120px;
+			height: 80px;
+			margin: 0 10px 0 0;
+		}
+		#content ul li a .texto{
+			display: block;
+			float: left;
+			width: 190px;
+		}
+		#content ul li a span{
+			display: block;
+			float: left;
+		}
+
+		#content ul li a span.marca{
+			font:bold 11px  arial;
+			padding: 2px 4px;
+			float: left;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+		}
+		#content ul li a span.titulo{
+			width: 100%;
+		}
+
+		#content ul li a span.vejasp{
+			background: #db2027;
+			color: white;
+		}
+		#content ul li a span.guiadoestudante{
+			background: #e5f1f1;
+			color: #4c4c4c;
+		}	
+		#content ul li a span.contigo{
+			background: black;
+			color: white;
+		}	
+		#content ul li a span.planetasustentavel{
+			background: #3c8154;
+			color: white;
+		}
+		/* FOOTER *******************************************************************************/
+		#footer{
+			float: left;
+			width: 100%;
+			height: 50px;
+			background: #04643e;
+		}
+		#footer form{
+			display: block;
+			float: left;
+			height: 50px;
+			border-right:1px solid white;
+			width: 299px;
+		}
+		#footer form label{
+			display: block;
+			float: left;
+			margin: 10px 0 0 0;
+		}
+		#footer form label input[type=text]{
+			width: 220px;
+			padding: 0 10px;
+			border: none;
+			line-height: 30px;
+			height: 30px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			margin: 0 0 0 15px;
+		}
+		#footer form label input[type=submit]{
+			width: 20px;
+			border: none;
+			line-height: 30px;
+			height: 30px;
+			background: url(img/ico-pesquisa.png) no-repeat center center;
+			text-indent: -9999px;
+			margin: 0 0 0 11px;
+			cursor: pointer;
+		}
+		#footer .config{
+			float: right;
+			width: 50px;
+			height: 50px;
+			background: url(img/ico-config.png) no-repeat center center;
+			cursor: pointer;
+		} 
+	</style>
+
+</head>
+<body>
+
+	<div id="container">
+		<div id="top"></div>
+		<div id="content">
+			<ul>
+				<li>
+					<a href="#" title="Title">
+						<img src="temp/image1.png" alt="VEJA São Paulo" />
+						<div class="texto">
+							<span class="marca vejasp">VEJA São Paulo</span>
+							<span class="titulo">O que abre e o que fecha neste feriado</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#" title="Title">
+						<img src="temp/image2.png" alt="Guia do Estudante" />
+						<div class="texto">
+							<span class="marca guiadoestudante">Guia do Estudante</span>
+							<span class="titulo">MEC divulga o Guia do Participante com orientações para a redação do Enem 2013</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#" title="Title">
+						<img src="temp/image3.png" alt="Planeta Sustentável" />
+						<div class="texto">
+							<span class="marca planetasustentavel">Planeta Sustentável</span>
+							<span class="titulo">Os freakonomistas atacam outra vez</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#" title="Contigo">
+						<img src="temp/image4.png" alt="Alt" />
+						<div class="texto">
+							<span class="marca contigo">Contigo</span>
+							<span class="titulo">Guerra dos Sexos: Ronaldo beija outra menina na frente de Isadora</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<form action="#" method="post">
+				<label><input type="text" name="busca" placeholder="Buscar em todas as matérias"></label>
+				<label><input type="submit"></label>
+			</form>
+			<div class="config"></div>
+		</div>
+	</div>
+	
+</body>
+</html>
