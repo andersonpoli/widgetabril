@@ -168,12 +168,12 @@ blockquote, q {
 }
 #config ul li a:hover{
     color: white;
-    background: #04643e;
+    background: #db2027;
 }
 #config ul li a.ativo{
     padding-right:25px;
     color: white;
-    background: #04643e url(img/close2.png) no-repeat right center;
+    background: #db2027 url(img/close.png) no-repeat right center;
 }
 /* FOOTER *******************************************************************************/
 #footer{
