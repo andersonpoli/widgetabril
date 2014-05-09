@@ -1,5 +1,27 @@
 window.VEJASP    = window.VEJASP || {};
 var VEJASP = window.VEJASP;
+
+
+VEJASP.changeUrlFiltro = function(filtro) {
+    window.location.hash = "#&category-meta_nav:" + filtro;
+}
+
+VEJASP.filtroTipo = function(obj){
+  $("ul.tipos li").removeClass('selecionado');
+  //armazena em uma variável o valor do filtro por tipo
+  var valor_filtrotipo = obj.data("filtrotipo");
+  if(VEJASP.mobileScreen()){
+    var texto_filtro_mobile = $(".filtro-mobile").text();
+    var novo_texto_filtro_mobile = obj.text();
+    obj.text(texto_filtro_mobile).attr('data-filtrotipo', texto_filtro_mobile);
+    $(".filtro-mobile").text(novo_texto_filtro_mobile);
+    $("ul.tipos").toggleClass('hidden-xs');
+  }else{
+    obj.addClass('selecionado');
+  }
+
+  VEJASP.BSC.changeUrlFiltro(valor_filtrotipo);
+}
 //////////////////////////////// VEJASP.BSC ////////////////////////////////
 
 VEJASP.BSC = {
